@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+        // .then(response)
+        users_div=document.querySelector("users");
+
+        // setTimeout(()=>{console.log('function called')},1000)
+        console.log('Line No.37')
+
+        async function getData(){
+            const data= await fetch('https://reqres.in/api/users?page=2')
+            const users= await data.json()
+            users.data.forEach(user => {
+                user_div= document.createElement('div')
+                user_div.innerHTML=`
+                <div class="user">
+                    <h1> ${user.first_name}  ${user.last_name} </h1>
+                    <img src="${user.avatar}">
+                    <p> ${user.email} </p>
+                
+                
+                `
+            })
+            return users;
+        }
+
+        const data= getData();
+
+
+
+    </script>
+</body>
+</html>

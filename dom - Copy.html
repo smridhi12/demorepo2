@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div> </div>
+    <div></div>
+    <h1></h1>
+    <p></p>
+    <h1>
+        <p></p>
+    </h1>
+    <article></article>
+    <span></span>
+
+</body>
+<script>
+//    ele = document.querySelector('h1')
+//    ele.style.background='green'
+//    ele.innerHTML= "<h1>Heading inserted dynamically</h1>" 
+//    ele.innerHTML="<p> Paragraph inserted dynamically</p>"
+
+//    anyvar=document.querySelector('h1 p')
+//    oldhtml=anyvar.innerHTML
+//    anyvar.innerHTML=oldhtml+ `<input type="password" id="password">`
+
+   menu_items=['home', 'about', 'contact', 'services', 'faq', 'career']
+   newele=document.querySelector('article');
+   menu =''; 
+   for(let i of menu_items){
+    menu += "<p>"+i+ "</p>"
+   }
+   newele.innerHTML=menu
+
+
+</script>
+</html>
